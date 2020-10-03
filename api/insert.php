@@ -5,10 +5,11 @@ header("Content-Type: application/json; charset=UTF-8");
 
 $response = array();
  
-if (isset($_GET['temp']) && isset($_GET['humidity'])) {
+if (isset($_GET['temp']) && isset($_GET['humidity']) && isset($_GET['pressure'])) {
  
     $temp = $_GET['temp'];
     $humidity = $_GET['humidity'];
+    $pressure = $_GET['pressure'];
 
     date_default_timezone_set('Asia/Colombo');
     $date = date("Y-m-d G:i:s");
@@ -19,7 +20,7 @@ if (isset($_GET['temp']) && isset($_GET['humidity'])) {
  
     $db = new DB_CONNECT();
  
-    $result = mysql_query("INSERT INTO weather(temp,humidity,date) VALUES('$temp','$humidity','$date')");
+    $result = mysql_query("INSERT INTO weather(temp,humidity,pressure,date) VALUES('$temp','$humidity','$pressure','$date')");
  
     if ($result) {
         $response["success"] = 1;

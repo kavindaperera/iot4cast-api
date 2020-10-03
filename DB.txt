@@ -1,0 +1,19 @@
+Database name
+id15013528_iot4cast	
+
+Database username
+id15013528_iot4cast_db
+
+Password
+0WOy_RkvTnP1r\bH
+
+Table - Weather
+*id
+*temp
+*humidity
+*pressure
+*date
+
+Table - LED
+*id
+*status
