@@ -23,6 +23,7 @@ if (mysql_num_rows($result) > 0) {
         $weather["temp"] = $row["temp"];
         $weather["humidity"] = $row["humidity"];
         $weather["pressure"] = $row["pressure"];
+        $weather["light"] = $row["light"];
 		$weather["date"] = $row["date"];
         
 
