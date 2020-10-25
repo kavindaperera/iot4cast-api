@@ -19,16 +19,16 @@ class DB_CONNECT {
 
         require_once($filepath."/dbconfig.php");
         
-        $con = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());
+        $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysqli_error($con));
  
-        $db = mysql_select_db(DB_DATABASE) or die(mysql_error()) or die(mysql_error());
+        $db = mysqli_select_db($con,DB_DATABASE) or die(mysqli_error($con)) or die(mysqli_error($con));
  
         return $con;
     }
  
 	// Function to close the database
     function close() {
-        mysql_close();
+        mysqli_close();
     }
  
 }

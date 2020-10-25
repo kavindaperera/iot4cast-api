@@ -1,16 +1,18 @@
 <?php
 
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+if( $_POST["xml"]) {
+    
+    $cap_xml = $_POST["xml"];
+    $myfile = fopen("cap_data.xml", "w");
+    fwrite($myfile, $cap_xml);
+    fclose($myfile);
 
-$response = array();
- 
-if (isset($_GET['temp']) && isset($_GET['humidity']) && isset($_GET['pressure']) && isset($_GET['light'])) {
- 
-    $temp = $_GET['temp'];
-    $humidity = $_GET['humidity'];
-    $pressure = $_GET['pressure'];
-    $light = $_GET['light'];
+    $capdata = simplexml_load_file("cap_data.xml");
+
+    $temp = $capdata->parameter[0]->value;
+    $humidity = $capdata->parameter[1]->value;
+    $pressure = $capdata->parameter[2]->value;
+    $light = $capdata->parameter[3]->value;
 
     date_default_timezone_set('Asia/Colombo');
     $date = date("Y-m-d G:i:s");
@@ -37,4 +39,5 @@ if (isset($_GET['temp']) && isset($_GET['humidity']) && isset($_GET['pressure'])
     $response["message"] = "Parameter(s) are missing. Please check the request";
     echo json_encode($response);
 }
+
 ?>
