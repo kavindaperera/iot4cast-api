@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+<parameter>
+<valueName>Temperature</valueName>
+<value>29.50</value>
+</parameter>
+<parameter>
+<valueName>Temperature</valueName>
+<value>80.00</value>
+</parameter>
+<parameter>
+<valueName>Temperature</valueName>
+<value>101017.39</value>
+</parameter>
+<parameter>
+<valueName>Temperature</valueName>
+<value>54.17</value>
+</parameter>
+</alert>
