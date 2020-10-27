@@ -2,18 +2,18 @@
 <alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
 <parameter>
 <valueName>Temperature</valueName>
-<value>29.50</value>
+<value>29.43</value>
 </parameter>
 <parameter>
-<valueName>Temperature</valueName>
-<value>80.00</value>
+<valueName>Humidity</valueName>
+<value>80.13</value>
 </parameter>
 <parameter>
-<valueName>Temperature</valueName>
-<value>101017.39</value>
+<valueName>Pressure</valueName>
+<value>100916.80</value>
 </parameter>
 <parameter>
-<valueName>Temperature</valueName>
-<value>54.17</value>
+<valueName>Light</valueName>
+<value>54.50</value>
 </parameter>
 </alert>
